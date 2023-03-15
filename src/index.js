@@ -75,7 +75,7 @@ function renderCountries(countries) {
 function renderCountry(countries) {
   renderCountries(countries);
   const country = countries[0];
-  const array = [];
+  const arrayElem = [];
   for (const key of ['Capital', 'Population', 'Languages']) {
     const p = document.createElement('p');
     const span = document.createElement('span');
@@ -88,10 +88,10 @@ function renderCountry(countries) {
     }
 
     p.prepend(span);
-    array.push(p);
+    arrayElem.push(p);
   }
 
-  countryInfo.append(...array);
+  countryInfo.append(...arrayElem);
 }
 
 function crearHTML(HTMLElements) {
