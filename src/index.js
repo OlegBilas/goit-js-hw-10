@@ -50,7 +50,7 @@ function normalizeCountries(countries) {
 }
 
 function renderCountries(countries) {
-  const arrayElem = [];
+  const array = [];
   countries.forEach(country => {
     const item = document.createElement('li');
     const img = document.createElement('img');
@@ -66,17 +66,17 @@ function renderCountries(countries) {
     }
 
     item.append(img, span);
-    arrayElem.push(item);
+    array.push(item);
   });
 
-  countryList.append(...arrayElem);
+  countryList.append(...array);
 }
 
 function renderCountry(countries) {
   renderCountries(countries);
   const country = countries[0];
-  arrayElem = [];
-  for (key of ['Capital', 'Population', 'Languages']) {
+  const array = [];
+  for (const key of ['Capital', 'Population', 'Languages']) {
     const p = document.createElement('p');
     const span = document.createElement('span');
     span.textContent = `${key}: `;
@@ -88,10 +88,10 @@ function renderCountry(countries) {
     }
 
     p.prepend(span);
-    arrayElem.push(p);
+    array.push(p);
   }
 
-  countryInfo.append(...arrayElem);
+  countryInfo.append(...array);
 }
 
 function crearHTML(HTMLElements) {
