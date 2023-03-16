@@ -76,8 +76,8 @@ function renderCountry(countries) {
   renderCountries(countries);
   const country = countries[0];
   const arrayElem = [];
-  const arrayOfItems = ['Capital', 'Population', 'Languages'];
-  for (const key of arrayOfItems) {
+
+  for (const key of ['Capital', 'Population', 'Languages']) {
     const p = document.createElement('p');
     const span = document.createElement('span');
     span.textContent = `${key}: `;
