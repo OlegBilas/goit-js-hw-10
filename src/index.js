@@ -22,7 +22,7 @@ function onInput(e) {
   fetchCountries(e.target.value.trim())
     .then(countries => {
       if (countries.length > 10) {
-        return Notiflix.Notify.info(
+        Notiflix.Notify.info(
           'Too many matches found. Please enter a more specific name.'
         );
       }
